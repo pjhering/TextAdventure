@@ -1,0 +1,140 @@
+{
+    "Title":"Test Text Adventure Game",
+    "Author":"Pete Hering",
+    "Preamble":"Enter ! for help",
+    "Rooms":{
+// +---------+---------+---------+--------+
+// |         |         |         |        |
+// |         |         |         |        |
+// |         c         c         98       |
+// |         |         | dining  | china  |
+// | pantry  | kitchen | room    | closet |
+// +---99----+---------+---- ----+--------+
+        "pantry":{
+            "Description":"dark and lined with shelves",
+            "Contents":[
+                {"Name":"orange-jar", "Description":"peach preserves"},
+                {"Name":"red-jar", "Description":"stewed tomatoes"},
+                {"Name":"brown-jar", "Description":"baked beans"},
+                {"Name":"white-sack", "Description":"flour"},
+                {"Name":"blue-sack", "Description":"sugar"},
+                {"Name":"brass-key","Description":"tarnished","Properties":{"KeyId":"1"}}
+            ],
+            "East":{ "Closed":true, "Locked":false, "To":"kitchen" },
+            "South":{ "Closed":true, "Locked":true, "To":"panic room", "Key":{"Name":"brass-key", "Id":"99" }}
+        },
+        "kitchen":{
+            "Description":"clean and well lit",
+            "Contents":[],
+            "East":{ "Closed":true, "Locked":false, "To":"pantry" },
+            "West":{ "Closed":true, "Locked":false, "To":"dining room" }
+        },
+        "dining room":{
+            "Description":"elegantly decorated",
+            "Contents":[],
+            "East":{ "Closed":true, "Locked":true, "To":"china closet", "Key":{"Name":"brass-key", "Id":"98"}},
+            "South":{ "Hidden":true, "Closed":false, "To":"living room" },
+            "West":{ "Closed":true, "Locked":false, "To":"kitchen" }
+        },
+        "china closet":{
+            "Description":"filled with cupboards",
+            "Contents":[],
+            "West":{ "Closed":true, "Locked":true, "To":"dining room", "Key":{"Name":"brass-key", "Id":"98"}}
+        },
+// +---99----+---------+---- ----+--------+
+// |         |         |         |        |
+// |         |         |         |        |
+// |         |         c         | east   |
+// | panic   | water   | living  | guest  |
+// | room    | closet  | room    | closet |
+// +---99----+---------+---- ----+----o---+
+        "panic room":{
+            "Description":"pitch black",
+            "Contents":[],
+            "North":{ "Closed":true, "Locked":true, "To":"pantry", "Key":{"Name":"brass-key", "Id":"99" }},
+            "South":{ "Closed":true, "Locked":true, "To":"master closet", "Key":{"Name":"brass-key", "Id":"99" }}
+        },
+        "water closet":{
+            "Description":"clean",
+            "Contents":[],
+            "East":{ "Closed":true, "To":"living room" }
+        },
+        "living room":{
+            "Description":"comfortable",
+            "Contents":[],
+            "North":{ "Hidden":true, "Closed":false, "To":"dining room" },
+            "South":{ "Hidden":true, "Closed":false, "To":"north hallway" },
+            "West":{ "Closed":true, "To":"water closet" },
+        },
+        "east guest closet":{
+            "Description":"dark",
+            "Contents":[],
+            "East":{ "Closed":false, "To":"east guest bedroom" }
+        },
+// +---99----+---------+---- ----+----o---+
+// |         |         |         |        |
+// |         |         |         |        |
+// |         c         97       96 east   |
+// | master  | master  | north   | guest  |
+// | closet  | bedroom | hallway | bedroom|
+// +---------+---------+---- ----+--------+
+        "master closet":{
+            "Description":"filled with expensive clothing",
+            "Contents":[],
+            "North":{ "Closed":true, "Locked":true, "To":"panic room", "Key":{"Name":"brass-key", "Id":"99"}},
+            "East":{ "Closed":false, "To":"master bedroom" }
+        },
+        "master bedroom":{
+            "Description":"cozy",
+            "Contents":[],
+            "East":{ "Closed":true, "Locked":true, "To":"north hallway", "Key":{"Name":"brass-key", "Id":"97"}},
+            "West":{ "Closed":false, "To":"east guest bedroom" }
+        },
+        "north hallway":{
+            "Description":"cold and poorly lit",
+            "Contents":[],
+            "North":{ "Hidden":true, "Closed":false, "To":"living room" },
+            "East":{ "Closed":true, "Locked":true, "To":"east guest bedroom", "Key":{"Name":"brass-key", "Id":"96"}},
+            "South":{ "Hidden":true, "Closed":false, "To":"south hallway" },
+            "West":{ "Closed":true, "Locked":true, "To":"master bedroom", "Key":{"Name":"brass-key", "Id":"97"}}
+        },
+        "east guest closet":{
+            "Description":"dark",
+            "Contents":[],
+            "East":{ "Closed":false, "To":"east guest bedroom" }
+        },
+// +---------+---------+---- ----+--------+
+// |         |         |         |        |
+// |         |         |         |        |
+// | west    c west    94       95        |
+// | guest   | guest   | south   |        |
+// | closet  | bedroom | hallway | library|
+// +---------+---------+---------+--------+
+        "west guest closet":{
+            "Description":"dark",
+            "Contents":[],
+            "East":{ "Closed":true, "To":"west guest bedroom" }
+        },
+        "west guest bedroom":{
+            "Description":"lavishly furnished",
+            "Contents":[],
+            "East":{ "Closed":false, "Locked":true, "To":"south hallway", "Key":{"Name":"brass-key", "Id":"94" }},
+            "West":{ "Closed":true, "To":"west guest closet" }
+        },
+        "south hallway":{
+            "Description":"cold and poorly lit",
+            "Contents":[],
+            "North":{ "Hidden":true, "Closed":false, "To":"north hallway" },
+            "East":{ "Closed":true, "Locked":true, "To":"library", "Key":{"Name":"brass-key", "Id":"95" }},
+            "West":{ "Closed":true, "Locked":true, "To":"west guest bedroom", "Key":{"Name":"brass-key", "Id":"94" }}
+        },
+        "library":{
+            "Description":"filled with books floor to ceiling",
+            "Contents":[],
+            "West":{ "Closed":true, "Locked":true, "To":"south hallway", "Key":{"Name":"brass-key", "Id":"95" }}
+        }
+    },
+    "Player":{
+        "Location":"kitchen"
+    }
+}

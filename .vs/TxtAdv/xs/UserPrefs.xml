@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{6CBAC34E-216E-4DE5-B328-1D5F277F01FA}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TxtAdv/Go.cs">
+    <Files>
+      <File FileName="TxtAdv/Go.cs" Line="24" Column="25" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.TxtAdv PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
