@@ -33,7 +33,7 @@
             "Description":"elegantly decorated",
             "Contents":[],
             "East":{ "Closed":true, "Locked":true, "To":"china closet", "Key":{"Name":"brass-key", "Id":"98"}},
-            "South":{ "Hidden":true, "Closed":false, "To":"living room" },
+            "South":{ "Description":"passage", "Closed":false, "To":"living room" },
             "West":{ "Closed":true, "Locked":false, "To":"kitchen" }
         },
         "china closet":{
@@ -62,8 +62,8 @@
         "living room":{
             "Description":"comfortable",
             "Contents":[],
-            "North":{ "Hidden":true, "Closed":false, "To":"dining room" },
-            "South":{ "Hidden":true, "Closed":false, "To":"north hallway" },
+            "North":{ "Description":"passage", "Closed":false, "To":"dining room" },
+            "South":{ "Description":"passage", "Closed":false, "To":"north hallway" },
             "West":{ "Closed":true, "To":"water closet" },
         },
         "east guest closet":{
@@ -93,9 +93,9 @@
         "north hallway":{
             "Description":"cold and poorly lit",
             "Contents":[],
-            "North":{ "Hidden":true, "Closed":false, "To":"living room" },
+            "North":{ "Description":"passage", "Closed":false, "To":"living room" },
             "East":{ "Closed":true, "Locked":true, "To":"east guest bedroom", "Key":{"Name":"brass-key", "Id":"96"}},
-            "South":{ "Hidden":true, "Closed":false, "To":"south hallway" },
+            "South":{ "Description":"passage", "Closed":false, "To":"south hallway" },
             "West":{ "Closed":true, "Locked":true, "To":"master bedroom", "Key":{"Name":"brass-key", "Id":"97"}}
         },
         "east guest closet":{
@@ -124,7 +124,7 @@
         "south hallway":{
             "Description":"cold and poorly lit",
             "Contents":[],
-            "North":{ "Hidden":true, "Closed":false, "To":"north hallway" },
+            "North":{ "Description":"passage", "Closed":false, "To":"north hallway" },
             "East":{ "Closed":true, "Locked":true, "To":"library", "Key":{"Name":"brass-key", "Id":"95" }},
             "West":{ "Closed":true, "Locked":true, "To":"west guest bedroom", "Key":{"Name":"brass-key", "Id":"94" }}
         },
