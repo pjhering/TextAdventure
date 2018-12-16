@@ -1,7 +1,10 @@
 ﻿<Properties StartupConfiguration="{6CBAC34E-216E-4DE5-B328-1D5F277F01FA}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="TxtAdv/Go.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TxtAdv/Look.cs">
     <Files>
-      <File FileName="TxtAdv/Go.cs" Line="24" Column="25" />
+      <File FileName="TxtAdv/Go.cs" Line="42" Column="27" />
+      <File FileName="TxtAdv/Player.cs" Line="48" Column="26" />
+      <File FileName="TxtAdv/Look.cs" Line="19" Column="31" />
+      <File FileName="TxtAdv/Door.cs" Line="26" Column="38" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

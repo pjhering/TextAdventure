@@ -6,6 +6,7 @@ namespace TxtAdv
 {
     public class Door
     {
+        public string Description { get; set; }
         public bool Hidden { get; set; }
         public bool Closed { get; set; }
         public bool Locked { get; set; }
@@ -20,7 +21,10 @@ namespace TxtAdv
         [OnDeserialized]
         internal void OnDeserialized(StreamingContext context)
         {
-            //WriteLine(this);
+            if (Description == null)
+            {
+                Description = "door";
+            }
         }
     }
 }

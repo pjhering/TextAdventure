@@ -21,13 +21,13 @@
                 {"Name":"brass-key","Description":"tarnished","Properties":{"KeyId":"1"}}
             ],
             "East":{ "Closed":true, "Locked":false, "To":"kitchen" },
-            "South":{ "Closed":true, "Locked":true, "To":"panic room", "Key":{"Name":"brass-key", "Id":"99" }}
+            "South":{ "Hidden":true, "Closed":true, "Locked":true, "To":"panic room", "Key":{"Name":"brass-key", "Id":"99" }}
         },
         "kitchen":{
             "Description":"clean and well lit",
             "Contents":[],
-            "East":{ "Closed":true, "Locked":false, "To":"pantry" },
-            "West":{ "Closed":true, "Locked":false, "To":"dining room" }
+            "West":{ "Closed":true, "Locked":false, "To":"pantry" },
+            "East":{ "Closed":true, "Locked":false, "To":"dining room" }
         },
         "dining room":{
             "Description":"elegantly decorated",
@@ -81,7 +81,7 @@
         "master closet":{
             "Description":"filled with expensive clothing",
             "Contents":[],
-            "North":{ "Closed":true, "Locked":true, "To":"panic room", "Key":{"Name":"brass-key", "Id":"99"}},
+            "North":{ "Hidden":true, "Closed":true, "Locked":true, "To":"panic room", "Key":{"Name":"brass-key", "Id":"99"}},
             "East":{ "Closed":false, "To":"master bedroom" }
         },
         "master bedroom":{
