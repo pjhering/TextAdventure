@@ -30,7 +30,7 @@ namespace TxtAdv
                 { "west", go },
                 { "hello", hello },
                 { "hi", hello },
-                { "!", help },
+                { "?", help },
                 { "help", help },
                 { "look", look },
                 { "quit", quit },

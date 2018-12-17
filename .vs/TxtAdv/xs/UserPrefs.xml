@@ -1,7 +1,9 @@
 ﻿<Properties StartupConfiguration="{6CBAC34E-216E-4DE5-B328-1D5F277F01FA}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="TxtAdv/Drop.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TxtAdv/GameEngine.cs">
     <Files>
-      <File FileName="TxtAdv/Drop.cs" Line="1" Column="1" />
+      <File FileName="TxtAdv/Drop.cs" Line="43" Column="36" />
+      <File FileName="TxtAdv/Help.cs" Line="21" Column="92" />
+      <File FileName="TxtAdv/GameEngine.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
