@@ -13,6 +13,8 @@ namespace TxtAdv
             sb.Append("you are in the ")
                 .Append(p.Location);
 
+            sb.Append("\nyou see:\n");
+
             door(r.North, "north", sb);
             door(r.East, "east", sb);
             door(r.South, "south", sb);
@@ -31,7 +33,6 @@ namespace TxtAdv
                     count[i.Name] += 1;
                 }
 
-                sb.Append("\nyou see:\n");
                 foreach(KeyValuePair<string, int> kv in count)
                 {
                     sb.Append("  ")
@@ -49,10 +50,11 @@ namespace TxtAdv
         {
             if(d != null && !d.Hidden)
             {
-                sb.Append("\nthere is a ")
+                sb.Append("  a ")
                     .Append(d.Description)
                     .Append(" to the ")
-                    .Append(dir);
+                    .Append(dir)
+                    .Append("\n");
             }
         }
     }
