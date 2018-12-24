@@ -1,0 +1,10 @@
+C:\Users\nheri\Documents\Visual Studio 2017\Solutions\TxtAdv\TxtAdv\bin\Debug\TxtAdv.exe
+C:\Users\nheri\Documents\Visual Studio 2017\Solutions\TxtAdv\TxtAdv\bin\Debug\TxtAdv.pdb
+C:\Users\nheri\Documents\Visual Studio 2017\Solutions\TxtAdv\TxtAdv\bin\Debug\Newtonsoft.Json.dll
+C:\Users\nheri\Documents\Visual Studio 2017\Solutions\TxtAdv\TxtAdv\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\nheri\Documents\Visual Studio 2017\Solutions\TxtAdv\TxtAdv\bin\Debug\Newtonsoft.Json.xml
+C:\Users\nheri\Documents\Visual Studio 2017\Solutions\TxtAdv\TxtAdv\obj\x86\Debug\TxtAdv.csprojAssemblyReference.cache
+C:\Users\nheri\Documents\Visual Studio 2017\Solutions\TxtAdv\TxtAdv\obj\x86\Debug\TxtAdv.csproj.CoreCompileInputs.cache
+C:\Users\nheri\Documents\Visual Studio 2017\Solutions\TxtAdv\TxtAdv\obj\x86\Debug\TxtAdv.csproj.CopyComplete
+C:\Users\nheri\Documents\Visual Studio 2017\Solutions\TxtAdv\TxtAdv\obj\x86\Debug\TxtAdv.exe
+C:\Users\nheri\Documents\Visual Studio 2017\Solutions\TxtAdv\TxtAdv\obj\x86\Debug\TxtAdv.pdb
