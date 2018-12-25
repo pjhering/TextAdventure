@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Configuration;
 using System.IO;
 using Newtonsoft.Json;
@@ -22,7 +18,7 @@ namespace TxtAdv
         public string ErrorMessage { get; set; }
 
         private Model _gameFile = null;
-        /// <summary>Returns a Model object if the constructor can resolve the file location and parse the json.</summary>
+        /// <summary>Contains a Model object if the constructor can resolve the file location and parse the json.</summary>
         public Model GameFile
         {
             get
@@ -41,8 +37,6 @@ namespace TxtAdv
 
         private string[] _args { get; set; }
 
-        private static string ConnectionString = ConfigurationManager.AppSettings["gamesConnection"];
-
         #endregion
 
         #region Constructor
@@ -50,9 +44,8 @@ namespace TxtAdv
         /// <summary>Data Access Layer accepts three arguments: agrs[0] 'open','save','delete' args[1] 'remote','local' args[2] 'fileName'</summary>
         public DAL(string[] args)
         {
-            Console.WriteLine("Constructor");
             _args = args;
-            switch (args[0].ToLower())
+            switch (this._args[0].ToLower())
             {
                 case "open":
                     ReadFile();
@@ -82,7 +75,6 @@ namespace TxtAdv
         //Expect args[1] = "local" or "remote"
         private void ReadFile()
         {
-            Console.WriteLine("ReadFile");
             if (string.IsNullOrEmpty(this._args[1]) || string.IsNullOrEmpty(this._args[2]))
             {
                 ErrorMessage = "usage:\n... TxtAdv open local <model-json-file>\n... TxtAdv open remote fileName";
@@ -101,7 +93,6 @@ namespace TxtAdv
 
         private void GetLocalFile()
         {
-            Console.WriteLine("GetLocalFile");
             FileInfo file = new FileInfo(this._args[2]);
             if (file.Exists)
             {
@@ -110,6 +101,7 @@ namespace TxtAdv
                     StreamReader reader = file.OpenText();
                     string json = reader.ReadToEnd();
                     GameFile = JsonConvert.DeserializeObject<Model>(json);
+                    this.FileExits = true;
                 }
                 catch (Exception ex)
                 {
@@ -120,29 +112,27 @@ namespace TxtAdv
 
         private void GetRemoteFile()
         {
-            Console.WriteLine("GetRemoteFile");
             string connectionString = ConfigurationManager.AppSettings["gamesConnection"];
             MySqlConnection conx = new MySqlConnection(connectionString);
             MySqlCommand cmd = conx.CreateCommand();
-            //cmd.CommandText = "SELECT * FROM TxtAdv_game WHERE name = " + _args[2];
-            cmd.CommandText = "SELECT * FROM TxtAdv_game WHERE name = 'defaultGame'";
+            cmd.CommandText = "SELECT * FROM TxtAdv_game WHERE Name = '" + _args[2] + "'";
+            //cmd.CommandText = "SELECT * FROM TxtAdv_game WHERE Name = 'defaultGame'";
             try
             {
                 conx.Open();
-                Console.WriteLine("conx.Open");
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                Console.WriteLine(e.Message);
+                ErrorMessage = ex.Message;
             }
             MySqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
                 string json = reader["JSON"].ToString();
-                Console.WriteLine(json);
                 GameFile = JsonConvert.DeserializeObject<Model>(json);
             }
             conx.Close();
+            this.FileExits = true;
         }
 
         private void DeleteFile()

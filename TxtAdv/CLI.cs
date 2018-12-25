@@ -13,7 +13,6 @@ namespace TxtAdv
             DAL dal = new DAL(args);
             if (dal.FileExits)
             {
-                Console.WriteLine("dal.FileExists: " + dal.FileExits.ToString());
                 BeginGame(dal.GameFile);
             }
             else
@@ -24,7 +23,6 @@ namespace TxtAdv
 
         private static void BeginGame(Model model)
         {
-            Console.WriteLine("BeginGame");
             GameEngine engine = new GameEngine(model);
 
             WriteLine("\t" + model.Title);
