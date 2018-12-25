@@ -3,3 +3,10 @@
 ################################################################################
 
 /TxtAdv/App.config
+/.vs/TxtAdv/v15/Server/sqlite3
+/.vs/TxtAdv/v15/.suo
+/TxtAdv/bin/Debug/Newtonsoft.Json.dll
+/TxtAdv/bin/Debug
+/TxtAdv/obj/x86/Debug
+/TxtAdv/obj/x86/Release/TxtAdv.csproj.CoreCompileInputs.cache
+/.vs/slnx.sqlite
