@@ -9,7 +9,6 @@ namespace TxtAdv
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Main(args): " + args.ToString());
             DAL dal = new DAL(args);
             if (dal.FileExits)
             {
