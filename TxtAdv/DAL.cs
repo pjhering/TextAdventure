@@ -44,7 +44,7 @@ namespace TxtAdv
         /// <summary>Data Access Layer accepts three arguments: agrs[0] 'open','save','delete' args[1] 'remote','local' args[2] 'fileName'</summary>
         public DAL(string[] args)
         {
-            _args = args;
+            this._args = args;
             switch (this._args[0].ToLower())
             {
                 case "open":
@@ -116,7 +116,6 @@ namespace TxtAdv
             MySqlConnection conx = new MySqlConnection(connectionString);
             MySqlCommand cmd = conx.CreateCommand();
             cmd.CommandText = "SELECT * FROM TxtAdv_game WHERE Name = '" + _args[2] + "'";
-            //cmd.CommandText = "SELECT * FROM TxtAdv_game WHERE Name = 'defaultGame'";
             try
             {
                 conx.Open();
