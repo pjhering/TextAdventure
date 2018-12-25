@@ -9,37 +9,22 @@ namespace TxtAdv
     {
         public static void Main(string[] args)
         {
-            if(args.Length != 1)
+            Console.WriteLine("Main(args): " + args.ToString());
+            DAL dal = new DAL(args);
+            if (dal.FileExits)
             {
-                WriteLine("Usage: TxtAdv <model-json-file>");
+                Console.WriteLine("dal.FileExists: " + dal.FileExits.ToString());
+                BeginGame(dal.GameFile);
             }
             else
             {
-                FileInfo file = new FileInfo(args[0]);
-
-                if(file.Exists)
-                {
-                    try
-                    {
-                        StreamReader reader = file.OpenText();
-                        string json = reader.ReadToEnd();
-                        Model model = JsonConvert.DeserializeObject<Model>(json);
-                        BeginGame(model);
-                    }
-                    catch (Exception ex)
-                    {
-                        WriteLine("Error: " + ex.Message);
-                    }
-                }
-                else
-                {
-                    WriteLine("File Not Found: " + args[0]);
-                }
+                WriteLine(dal.ErrorMessage);
             }
         }
 
         private static void BeginGame(Model model)
         {
+            Console.WriteLine("BeginGame");
             GameEngine engine = new GameEngine(model);
 
             WriteLine("\t" + model.Title);

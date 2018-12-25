@@ -8,3 +8,7 @@ C:\Users\nheri\Documents\Visual Studio 2017\Solutions\TxtAdv\TxtAdv\obj\x86\Debu
 C:\Users\nheri\Documents\Visual Studio 2017\Solutions\TxtAdv\TxtAdv\obj\x86\Debug\TxtAdv.csproj.CopyComplete
 C:\Users\nheri\Documents\Visual Studio 2017\Solutions\TxtAdv\TxtAdv\obj\x86\Debug\TxtAdv.exe
 C:\Users\nheri\Documents\Visual Studio 2017\Solutions\TxtAdv\TxtAdv\obj\x86\Debug\TxtAdv.pdb
+C:\Users\nheri\Documents\Visual Studio 2017\Solutions\TxtAdv\TxtAdv\bin\Debug\TxtAdv.exe.config
+C:\Users\nheri\Documents\Visual Studio 2017\Solutions\TxtAdv\TxtAdv\bin\Debug\MySql.Data.dll
+C:\Users\nheri\Documents\Visual Studio 2017\Solutions\TxtAdv\TxtAdv\bin\Debug\Google.Protobuf.dll
+C:\Users\nheri\Documents\Visual Studio 2017\Solutions\TxtAdv\TxtAdv\bin\Debug\MySql.Data.xml
